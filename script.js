@@ -100,6 +100,12 @@ function getRiskScore(issueText) {
   ) {
     return 2;
   }
+  if (
+    text.includes ("children")
+  ) {
+    return 1;
+  }
+   
 
   return 3;
 }
@@ -170,3 +176,4 @@ db.collection("reports").onSnapshot(snapshot => {
     }
   });
 });
+
